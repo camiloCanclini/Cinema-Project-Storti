@@ -118,7 +118,7 @@ input[type="submit"]:hover{
 }
 .format-table{
     display: grid;
-    height: 8vh;
+    height: 15vh;
     align-items: center;
     grid-auto-columns: minmax(50px, 1fr);
     grid-auto-flow: column;
@@ -129,6 +129,7 @@ input[type="submit"]:hover{
     border-radius: 10px;
 }
 .format-table > *{
+    font-family: monospace;
     margin: 0;
     min-width: 100%;
     height: 100%;
@@ -138,6 +139,10 @@ input[type="submit"]:hover{
     text-align: center;
     border-left: 2px solid white;
     border-right: 2px solid white;
+}
+.format-table img{
+    width: 100%;
+    object-fit: contain;
 }
 /* a{
     height: min-content;
