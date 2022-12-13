@@ -1,19 +1,17 @@
 <?php
-    
-    
     function conectDb(){
 		$user = "root";
-        $pass = "";
+        $pass = "admin";
         $database = "cinema_master";
-        $ip = "localhost";
+        $ip = "127.0.0.1";
         $link = mysqli_connect($ip, $user, $pass, $database);
 		if($link -> connect_error){
 			die("No a sido posible establecer conexión con la base de datos");
 		}else{
-			//echo "conexion exitosa";
 			return $link;
 		}
 	}
+	conectDb();
 	function disconectDb($link){
 		$close = mysqli_close($link);
 			if($close){
