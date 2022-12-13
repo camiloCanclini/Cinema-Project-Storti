@@ -1,7 +1,7 @@
 <?php
     
     
-    function connectDb(){
+    function conectDb(){
 		$user = "root";
         $pass = "";
         $database = "cinema_master";
@@ -14,7 +14,7 @@
 			return $link;
 		}
 	}
-	function disconnectDb($link){
+	function disconectDb($link){
 		$close = mysqli_close($link);
 			if($close){
 				echo 'La desconexion de la base de datos se ha hecho satisfactoriamente <br>';

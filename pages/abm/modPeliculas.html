@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-weditAlquiler.htmlidth, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/general_styles.css">
-    <link rel="stylesheet" type="text/css" href="../../css/abm/abm_modPeliculas.css">
+    <link rel="stylesheet" type="text/css" href="../../css/abm/abm_styles.css">
     <script src="https://kit.fontawesome.com/b039591234.js" crossorigin="anonymous"></script>
     <title>Administracion CinemaMaster</title>
 </head>
@@ -15,14 +15,17 @@
     <main>
         <h1 class="titles">INGRESAR PELICULAS</h1>
         
-        <form action="" method="POST">
+        <form id="form">
             <div>
                 <label for="equipo">TITULO</label>
-                <input id="search-input" name="movie-title" type="text">
-                <input type="submit" name="inputSearch" value="Buscar">
+                <input id="search-input" name="movie-title" type="text" style="border-radius: 20px 0px 0px 20px;">
+                <input type="submit" name="inputSearch" value="Buscar" style="border-radius: 0px 20px 20px 0px;">
             </div>
         </form>
-        <h2 class="titles">DATOS CARGADOS - MODIFICACIÓN - ELIMINACIÓN</h2>
+        <div id="containerMovies" style="display: none;">
+
+        </div>
+        <h2 class="titles">DATOS CARGADAS - MODIFICACIÓN - ELIMINACIÓN</h2>
     <div class="format-table">
             <div>ID</div>
             <div>Titulo</div>
@@ -39,20 +42,19 @@
     los datos de la base
     -->
     <div class="format-table">
-        <div>312</div>
-        <div>Los pumas</div>
-        <div>Los tigres</div>
-        <div>9 de julio 935</div>
-        <div>23/07/2022</div>
-        <div>2hs</div>
-        <a class="edit" onclick="alert('funciona')"><i class="fas fa-edit"></i></a>
-        <a class="delete"><i class="fa-solid fa-square-minus"></i></a>
+        <div>ID</div>
+        <div>ID</div>
+        <div>Fecha de la Venta</div>
+        <div>Numero Función</div>
+        <div>Numero de Sala</div>
+        <div>Tipo de Entrada</div>
+        <div>Pelicula</div>
+        <div>Cantidad Entradas</div>
+        <div>Pelicula</div>
     </div>
     
     </main>
-    <script src="../js/queryFechas.js"></script>
-    <script src="../js/extraQuerys.js"></script>
-    <script src="../js/deleteAbm.js"></script>
+    <script src="../../scripts/apiQuery.js"></script>
 </body>
 
 </html>
