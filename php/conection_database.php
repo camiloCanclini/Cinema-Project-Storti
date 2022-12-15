@@ -1,9 +1,9 @@
 <?php
     function conectDb(){
 		$user = "root";
-        $pass = "admin";
+        $pass = "";
         $database = "cinema_master";
-        $ip = "127.0.0.1";
+        $ip = "localhost";
         $link = mysqli_connect($ip, $user, $pass, $database);
 		if($link -> connect_error){
 			die("No a sido posible establecer conexión con la base de datos");
