@@ -43,9 +43,12 @@ function showResponse2(movies, containerPrint){
         duracion.innerHTML = i[3];
         clasificacion.innerHTML = i[4];
         genero.innerHTML = i[5];
-        poster.setAttribute("SRC", i[9]); 
+        poster.setAttribute("SRC", i[9]);
+        
         editar.setAttribute("HREF","editPelicula.html?id="+i[0]);
-        eliminar.setAttribute("HREF","../../deletePelicula.php?id="+i[0]);
+        eliminar.setAttribute("HREF","../../php/delete_movie.php?id="+i[0]);
+        editar.innerHTML = `<i class="fa-solid fa-pen"></i>`;
+        eliminar.innerHTML = `<i class="fa-solid fa-trash"></i>`;
 
         movieContainer.appendChild(id);
         movieContainer.appendChild(titulo);
