@@ -132,9 +132,6 @@ input[type="submit"]:hover{
     font-size: 1.2rem;
     text-align: center;
 }
-.format-table > *{
-    
-}
 .format-table img{
     width: 60%;
     object-fit: scale-down;

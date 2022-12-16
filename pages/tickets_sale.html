@@ -17,8 +17,10 @@
         <div>
             <button id="cancel-button" onclick="history.go(-1)"><i class="fa-solid fa-circle-xmark"></i></button>
             <form action="php/login.php" method="POST">
-                <select name="function" id="">
+                <select name="function" id="funcionesContainer">
+                    
                     <option value="1">Movie - Sala - Cine - Fecha</option>
+                    
                 </select>
                 <input type="number" min="1" max="100" placeholder="Edad">
                 <input type="number" max="20" placeholder="Cantidad entradas">
@@ -45,4 +47,5 @@
         </div>
     </main>
 </body>
+<script src="../scripts/functionsQueryServer.js"></script>
 </html>
