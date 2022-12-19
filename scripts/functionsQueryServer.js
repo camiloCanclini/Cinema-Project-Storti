@@ -11,7 +11,7 @@ console.log('containerPrint:', containerPrint);
             var respuesta = JSON.parse(this.responseText);//Se obtiene la respuesta de la API y se transforma array
             console.log(respuesta);
             let funciones = respuesta;
-            console.log('funciones:', funciones)
+            //console.log('funciones:', funciones)
             showResponse(funciones, containerPrint);         
         }
     }
@@ -23,12 +23,13 @@ function showResponse(funciones, containerPrint){
 	console.log(funciones);
 	/*Se recorre el ARRAY y se pintan los datos que contiene*/
 	for(let i of funciones){
-		console.log('Pintando Objetos...');
-		console.log(i);
+		//console.log('Pintando Objetos...');
+		//console.log(i);
 
         let optionContainer = document.createElement("OPTION");
 
-        optionContainer.setAttribute("name","hola")
+        optionContainer.setAttribute("name","funcion")
+        optionContainer.setAttribute("value",i[0])
 
         optionContainer.innerHTML = i['titulo']+" - "+i['horario']+" - "+i['direccion']+" - "+i['duracion']
 

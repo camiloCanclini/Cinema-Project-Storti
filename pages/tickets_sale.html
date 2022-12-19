@@ -16,14 +16,13 @@
     <main>
         <div>
             <button id="cancel-button" onclick="history.go(-1)"><i class="fa-solid fa-circle-xmark"></i></button>
-            <form action="php/login.php" method="POST">
-                <select name="function" id="funcionesContainer">
-                    
+            <!-- ../php/create_ticket.php -->
+            <form action="" method="POST" id="form">
+                <select name="funcion" id="funcionesContainer">       
                     <option value="1">Movie - Sala - Cine - Fecha</option>
-                    
                 </select>
-                <input type="number" min="1" max="100" placeholder="Edad">
-                <input type="number" max="20" placeholder="Cantidad entradas">
+                <input name="edad" type="number" min="1" max="100" placeholder="Edad">
+                <input name="cantidad" type="number" min="1" max="20" placeholder="Cantidad entradas">
                 <fieldset name="jubilado" for="">
                     <legend>¿Jubilado?</legend>
                     <label for="">SI</label>
@@ -31,21 +30,22 @@
                     <label for="">NO</label>
                     <input type="radio" name="jubilado" value="false">
                 </fieldset>
-                <input type="submit" value="Confirmar" id="submit-button">    
+                <input type="submit" name="confirmar" value="confirmar" id="submit-button">    
             </form>
             <div>
                 <span>Resumen de la Venta</span>
                 <div id="resume_container">
-                    <p>Cantidad de entradas: </p>
-                    <p>Función: </p>
-                    <p>Descuentos: </p>
+                    <p>Cantidad de entradas: <span id="resume_cantidad"></span></p>
+                    <p>Función: <span id="resume_funcion"></span></p>
+                    <p>Descuentos: <span id="resume_descuento"></span></p>
                 </div>
                 <div id="final_price_container">
-                    <div>Final a pagar <span></span></div>
+                    <div>Final a pagar <span id="resume_final_price"></span></div>
                 </div>
             </div>
         </div>
     </main>
 </body>
 <script src="../scripts/functionsQueryServer.js"></script>
+<script src="../scripts/ticketResume.js"></script>
 </html>

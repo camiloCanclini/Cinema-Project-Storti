@@ -1,32 +1,33 @@
 <?php
 include('conection_database.php');
+$precio_ticket = 500;
 $enlace = conectDb();
 mysqli_set_charset($enlace, "utf8"); //formato de datos utf8
 
-if (isset($_POST['confirmar'])) {
-    
+$data = json_decode(file_get_contents("php://input"));
+
+   $funcion = $data->funcion;
+   $precio = $data->precio;
+   $tipo = $data->tipo;
+   $cantidad = $data->cantidad;
+   $confirmar = $data->confirmar;
+
+if (isset($confirmar)) {
     $fecha = date('d/m/y h:i:s');
-    echo $fecha;
-    $edad = $_POST['edad'];
-    $cantidad_entradas = $_POST['cantidad_entradas'];
-    $tipo = $_POST['jubilado'];
-    if ($tipo = "true") {
+    if ($tipo == "true") {
         $tipo = "Jubilado";
     }else{
         $tipo = "Normal";
     }
-    $precio = $_POST['precio'];
-    $fk_numero_funcion = $_POST['fk_numero_funcion'];
 
-    $query = "INSERT INTO `Peliculas`(`fecha`, `tipo`, `precio`, `fk_numero_funcion`) VALUES ('$fecha','$tipo', '$precio', '$fk_numero_funcion');";
-    $result = mysqli_query($enlace, $query);
-
-    if(!$result) {
-        
-        die("Query Failed.");
+    try {
+        $query = "INSERT INTO `Entradas`(`fecha`, `tipo`, `precio`, `cantidad_tickets`, `fk_numero_funcion`) VALUES ('$fecha','$tipo', '$precio', '$cantidad', '$funcion');";
+        $result = mysqli_query($enlace, $query);
+        echo "true";
+    } catch (\Throwable $th) {
+        echo "false";
     }
-    //$_SESSION['message'] = 'Task Saved Successfully';
-    //$_SESSION['message_type'] = 'success';
-    header('Location: ../pages/abm/modPeliculas.html');
+    
+    
 }
 ?>
