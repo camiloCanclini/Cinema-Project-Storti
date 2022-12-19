@@ -1,6 +1,8 @@
 <?php
    include('conection_database.php');
+
     $enlace = conectDb();
+    
     mysqli_set_charset($enlace, "utf8"); //formato de datos utf8
 
     if (isset($_POST['actualizar'])) {

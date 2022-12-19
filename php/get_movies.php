@@ -11,6 +11,7 @@ $result = mysqli_query($enlace, $query);
 if(!$result){
     die("Query Failed.");
 }
+
 $rawdata = array(); //creamos un array, que se convertira a JSON
 $i = 0;
 while($row = mysqli_fetch_array($result))//Se recorre el resultado de la consulta

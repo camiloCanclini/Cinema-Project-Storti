@@ -13,5 +13,4 @@ if  (isset($_GET['id'])) {
     }
     header('Location: ../pages/abm/modPeliculas.html');
 }
-
 ?>

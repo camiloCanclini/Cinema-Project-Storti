@@ -31,7 +31,7 @@ function showResponse(funciones, containerPrint){
         optionContainer.setAttribute("name","funcion")
         optionContainer.setAttribute("value",i[0])
 
-        optionContainer.innerHTML = i['titulo']+" - "+i['horario']+" - "+i['direccion']+" - "+i['duracion']
+        optionContainer.innerHTML = i['titulo']+" - "+i['horario']+" - "+i['direccion']+" - "+i['duracion']+" - "+i["nombre"];
 
 		containerPrint.appendChild(optionContainer);
 		// console.log(i);

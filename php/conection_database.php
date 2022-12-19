@@ -11,7 +11,6 @@
 			return $link;
 		}
 	}
-	conectDb();
 	function disconectDb($link){
 		$close = mysqli_close($link);
 			if($close){

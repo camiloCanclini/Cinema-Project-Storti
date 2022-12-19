@@ -1,6 +1,7 @@
 const containerPrint = document.getElementById('containerMoviesDB');
+
 (function serverRequest(){
-    const HTTPREQUEST2 = new XMLHttpRequest(); //Se crea objeto HTTPREQUEST
+    const HTTPREQUEST2 = new XMLHttpRequest(); //Se crea objeto HTTPREQUEST AJAX
     url = "../../php/get_movies.php"
     HTTPREQUEST2.open('GET',url, true); //Se configura la petición
     /*Comienzan las operaciones AJAX*/
@@ -17,6 +18,7 @@ const containerPrint = document.getElementById('containerMoviesDB');
     HTTPREQUEST2.send();
 }
 )();
+
 function showResponse2(movies, containerPrint){
 	console.log(movies);
 	/*Se recorre el ARRAY y se pintan los datos que contiene*/
