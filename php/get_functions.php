@@ -4,7 +4,7 @@ $enlace = conectDb();
 mysqli_set_charset($enlace, "utf8"); //formato de datos utf8
 
 
-$query = "SELECT * FROM Funciones LEFT OUTER JOIN Peliculas ON Funciones.fk_id_pelicula = Peliculas.imdbID LEFT OUTER JOIN Salas ON Funciones.fk_numero_sala = Salas.id LEFT OUTER JOIN Cines ON Salas.numero_cine = Cines.numero;";
+$query = "SELECT * FROM Programacion LEFT OUTER JOIN Peliculas ON Programacion.fk_id_pelicula = Peliculas.imdbID LEFT OUTER JOIN Salas ON Programacion.fk_numero_sala = Salas.id LEFT OUTER JOIN Cines ON Salas.numero_cine = Cines.numero;";
 $result = mysqli_query($enlace, $query);
 //echo $query;
 
