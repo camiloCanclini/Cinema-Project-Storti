@@ -4,7 +4,7 @@
         $pass = "";
         $database = "cinema_master";
         $ip = "localhost";
-        $link = mysqli_connect($ip, $user, $pass, $database, 3307);
+        $link = mysqli_connect($ip, $user, $pass, $database);
 		if($link -> connect_error){
 			die("No a sido posible establecer conexión con la base de datos");
 		}else{

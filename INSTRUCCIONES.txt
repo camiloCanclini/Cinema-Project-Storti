@@ -1,0 +1,20 @@
+1. nombre base de datos = cinema_master
+(para montarla en phpmyadmin)
+
+2. pegar la carpeta del proyecto en htdocs
+
+3. una vez que entramos al index, ponemos:
+correo: admin@admin
+contra: admin
+
+esto nos lleva al menu del abm 
+
+4. en "modificar peliculas" estan las consultas del ABM (crear, borrar, editar y actualizar)
+
+5. tambien podemos entrar a una interfaz de usuario para comprar tickets, tenemos que  poner en la URL "http://localhost/storti/pages/tickets_sale.html"
+(a esta le falta el seleccionar un combo)
+
+6. para probar las demas consultas, las 2 JOIN y las funciones adicionales, tenemos que  ir al phpmyadmin, seleccionar la base de cinema_master e ir a la parte de routines.
+
+7. en routines estan todas las consultas
+
